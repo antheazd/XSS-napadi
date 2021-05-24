@@ -3,7 +3,8 @@
 
 <HTML>
 <BODY>
-//ispis na stranici
+//možemo skratiti i napisati samo <h1>Error 404 Not Found</h1>
+//ispis na stranici koji preko get metode prenosi pojam na web stranicu
 Traženi pojam
 <?php
 echo $_GET['pojam']; //neprovjereni i nekodirani ispis traženog pojma
