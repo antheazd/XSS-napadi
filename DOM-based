@@ -1,0 +1,14 @@
+http://www.legitimni_posluzitelj.com/dobrodosli.html?ime=<script>alert(document.cookie)</script> 
+
+<HTML>
+<BODY>
+Dobar dan
+<SCRIPT>
+//određivanje pozicije na kojoj počinje korisničko ime unutar URL-a
+var pozicija = document.URL.indexOf("ime=")+4;
+//neprovjereni i nekodirani ispis ulaznog znakovnog niza (korisničkog imena)
+//zaprimljenog unutar URL-a
+document.write(document.URL.substring(pozicija, document.URL.length));
+</SCRIPT>
+</BODY>
+</HTML> 
