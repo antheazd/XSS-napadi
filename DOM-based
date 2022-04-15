@@ -14,3 +14,4 @@ document.write(document.URL.substring(pozicija, document.URL.length));
 </HTML> 
 
 //nova linija
+//jos jedna linija
