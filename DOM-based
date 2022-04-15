@@ -12,3 +12,5 @@ document.write(document.URL.substring(pozicija, document.URL.length));
 </SCRIPT>
 </BODY>
 </HTML> 
+
+//nova linija
